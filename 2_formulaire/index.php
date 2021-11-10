@@ -1,9 +1,14 @@
 <?php
 require 'form.php';
 
-$form = new Form(array(
-    'username' => 'Franck'
-));
+$form = new Form($_POST);
 
-$form->input('username');
-$form->input('password');
+?>
+
+<form action="#" method="post">
+    <?php
+        echo $form->input("username");
+        echo $form->input("password");
+        echo $form->submit();
+    ?>
+</form>
